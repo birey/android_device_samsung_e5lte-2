@@ -19,6 +19,10 @@ BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/e5lte/dtb --tags_offset 0x01e00000
+TARGET_KERNEL_SOURCE := kernel/samsung/e5lte
+TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
+TARGET_KERNEL_VARIANT_DEFCONFIG := msm8916_sec_e5_eur_defconfig
+TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 
 # fix this up by examining /proc/mtd on a running device
 #BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00380000
@@ -34,7 +38,6 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TARGET_PREBUILT_KERNEL := device/samsung/e5lte/kernel
 DEVICE_RESOLUTION := 720x1280
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
