@@ -21,7 +21,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/e5lte/dtb --tags_offset 0x01e00000
 TARGET_KERNEL_SOURCE := kernel/samsung/e5lte
 TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
-TARGET_KERNEL_VARIANT_DEFCONFIG := msm8916_sec_e5_eur_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_e5_eur_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 
 # fix this up by examining /proc/mtd on a running device
