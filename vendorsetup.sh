@@ -1,0 +1,1 @@
+add_lunch_combo cm_e5lte-userdebug

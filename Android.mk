@@ -12,15 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Inherit from e53g device
-$(call inherit-product, device/samsung/e5lte/device.mk)
+include $(CLEAR_VARS)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := e5lte
-PRODUCT_NAME := full_e5lte
-PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-E500M
-PRODUCT_MANUFACTURER := samsung
+ALL_PREBUILT = $(INSTALLED_KERNEL_TARGET)
+
+ifeq ($(TARGET_DEVICE),e5lte)
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+endif
